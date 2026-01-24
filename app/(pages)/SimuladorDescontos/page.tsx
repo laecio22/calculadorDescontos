@@ -1,6 +1,9 @@
+'use client'
 import EntradaValor from "@/app/_components/EntradaValor";
+import { useState } from "react";
 
 const SimuladorDescontos = () => {
+  const [valor, setValor] =  useState('')
   return (
     <section className=" h-100 
       w-3xl
@@ -11,7 +14,8 @@ const SimuladorDescontos = () => {
        items-center p-6
       " >
         <h2 className="font-bold text-3xl ">Simulador de Descontos</h2>
-        <EntradaValor  />
+        <EntradaValor valor={valor} aoDigitar={setValor} />
+        {valor}
       </form>
     </section>
   );
