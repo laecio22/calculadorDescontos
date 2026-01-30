@@ -1,4 +1,5 @@
 "use client";
+import BotaoCalcular from "@/app/_components/BotaoCalcular";
 import EntradaValor from "@/app/_components/EntradaValor";
 import SeletorCliente from "@/app/_components/SeletorCliente";
 import { useState } from "react";
@@ -8,6 +9,10 @@ const SimuladorDescontos = () => {
   const [mensagem, setMensagem] = useState("");
   const [tipoUsuario, setTipoUsuario] = useState("");
   const [valorFinal, setValorFinal] = useState(null);
+
+  const calcularDesconto = () => {
+    console.log("cloicou");
+  };
 
   return (
     <section
@@ -26,6 +31,7 @@ const SimuladorDescontos = () => {
         <h2 className="font-bold text-3xl ">Simulador de Descontos</h2>
         <EntradaValor valor={valor} aoDigitar={setValor} />
         <SeletorCliente typeUser={tipoUsuario} aoSelecionar={setTipoUsuario} />
+        <BotaoCalcular aoClicar={calcularDesconto} />
         {valor}
         {tipoUsuario}
       </form>
