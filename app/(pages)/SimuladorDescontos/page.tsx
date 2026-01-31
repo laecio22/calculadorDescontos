@@ -1,6 +1,7 @@
 "use client";
 import BotaoCalcular from "@/app/_components/BotaoCalcular";
 import EntradaValor from "@/app/_components/EntradaValor";
+import Resultado from "@/app/_components/Resultado";
 import SeletorCliente from "@/app/_components/SeletorCliente";
 import { useState } from "react";
 
@@ -32,6 +33,7 @@ const SimuladorDescontos = () => {
         <EntradaValor valor={valor} aoDigitar={setValor} />
         <SeletorCliente typeUser={tipoUsuario} aoSelecionar={setTipoUsuario} />
         <BotaoCalcular aoClicar={calcularDesconto} />
+        <Resultado mensagem={mensagem} valorFinal={valorFinal}/>
         {valor}
         {tipoUsuario}
       </form>
