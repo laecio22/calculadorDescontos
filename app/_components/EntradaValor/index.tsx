@@ -8,7 +8,7 @@ const EntradaValor = ({valor, aoDigitar}:InputProps) => {
       type="number"
       min={0}
       className="border border-cyan-800 w-9/12 h-10 px-3 rounded-lg "
-      placeholder="Informe valor "
+      placeholder="Informe valor gasto"
       value={valor}
       onChange={(e)=>aoDigitar(e.target.value) }
       
