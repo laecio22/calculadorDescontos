@@ -5,6 +5,14 @@ import Resultado from "@/app/_components/Resultado";
 import SeletorCliente from "@/app/_components/SeletorCliente";
 import { useState } from "react";
 
+const styles = {
+  tamanho: 'h-100 w-3xl',
+  cor: 'bg-cyan-50',
+  borda:'rounded-lg',
+  padding: 'p-6',
+  alinhamento: 'flex flex-col items-center'
+}
+
 const SimuladorDescontos = () => {
   const [valor, setValor] = useState("");
   const [mensagem, setMensagem] = useState("");
@@ -49,17 +57,11 @@ const SimuladorDescontos = () => {
 
   return (
     <section
-      className=" h-100 
-      w-3xl
-     bg-cyan-50
-      rounded-lg
-      "
+      className={`${styles.borda} ${styles.cor} ${styles.tamanho}`}    
     >
       <form
         action=""
-        className="flex flex-col gap-8
-       items-center p-6
-      "
+        className={`${styles.alinhamento} ${styles.padding} gap-8`}
       >
         <h2 className="font-bold text-3xl ">Simulador de Descontos</h2>
         <EntradaValor valor={valor} aoDigitar={setValor} />
