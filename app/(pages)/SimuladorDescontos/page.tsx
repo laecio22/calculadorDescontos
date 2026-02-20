@@ -68,9 +68,7 @@ const SimuladorDescontos = () => {
         <SeletorCliente typeUser={tipoUsuario} aoSelecionar={setTipoUsuario} />
         <BotaoCalcular aoClicar={calcularDesconto} />
         <Resultado mensagem={mensagem} valorFinal={valorFinal} />
-        {valor}
-        {tipoUsuario}
-      </form>
+        </form>
     </section>
   );
 };
